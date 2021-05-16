@@ -1,15 +1,14 @@
 package com.deserve.SnakeAndLadder;
 
-import java.util.Scanner;
-
-import com.deserve.SnakeAndLadder.service.SnakeAndLadderService;
+import com.deserve.SnakeAndLadder.input.SnakeAndLadderDataReaderFactory;
+import com.deserve.SnakeAndLadder.input.SnakeAndLadderInputReader;
+import com.deserve.SnakeAndLadder.processor.SnakeAndLadderProcessor;
 
 public class App {
 	public static void main(String[] args) {
 
-		System.out.println("######## Welcome to Snake And Ladder #######");
-		try (Scanner scanner = new Scanner(System.in);) {
-			SnakeAndLadderService snakeAndLadderService = new SnakeAndLadderService();
-		}
+		SnakeAndLadderInputReader snakeAndLadderInputReader = SnakeAndLadderDataReaderFactory.getInstance()
+				.getReader();
+		new SnakeAndLadderProcessor(snakeAndLadderInputReader).process();
 	}
 }
