@@ -56,42 +56,42 @@ public class ConsoleBasedInputReader implements SnakeAndLadderInputReader {
 		}
 	}
 
-	@Override
-	public List<Snake> getSnakes() {
-		System.out.println("Number of Snakes:");
+//	@Override
+//	public List<Snake> getSnakes() {
+//		System.out.println("Number of Snakes:");
+//
+//		throwExceptionForInvalidValue();
+//		int snakeCount = Integer.parseInt(SCANNER.nextLine());
+//
+//		return fillSnakesCoordinates(snakeCount);
+//	}
 
-		throwExceptionForInvalidValue();
-		int snakeCount = Integer.parseInt(SCANNER.nextLine());
+//	private List<Snake> fillSnakesCoordinates(int snakeCount) {
+//
+//		List<Snake> snakes = new ArrayList<>();
+//		for (int i = 1; i <= snakeCount; i++) {
+//			System.out.println("Snake :: " + i);
+//
+//			System.out.print("Start: ");
+//			throwExceptionForInvalidValue();
+//			int start = Integer.parseInt(SCANNER.nextLine());
+//
+//			System.out.print("End: ");
+//			throwExceptionForInvalidValue();
+//			int end = Integer.parseInt(SCANNER.nextLine());
+//
+//			// Add ->  start position > end position
+//			boolean isValidStartEnd = validateStartEnd(start, end);
+//			if (!isValidStartEnd) {
+//				i--;
+//				continue;
+//			}
+//			Snake snake = new Snake(start, end);
+//			snakes.add(snake);
+//		}
 
-		return fillSnakesCoordinates(snakeCount);
-	}
-
-	private List<Snake> fillSnakesCoordinates(int snakeCount) {
-
-		List<Snake> snakes = new ArrayList<>();
-		for (int i = 1; i <= snakeCount; i++) {
-			System.out.println("Snake :: " + i);
-
-			System.out.print("Start: ");
-			throwExceptionForInvalidValue();
-			int start = Integer.parseInt(SCANNER.nextLine());
-
-			System.out.print("End: ");
-			throwExceptionForInvalidValue();
-			int end = Integer.parseInt(SCANNER.nextLine());
-
-			// Add ->  start position > end position
-			boolean isValidStartEnd = validateStartEnd(start, end);
-			if (!isValidStartEnd) {
-				i--;
-				continue;
-			}
-			Snake snake = new Snake(start, end);
-			snakes.add(snake);
-		}
-
-		return snakes;
-	}
+//		return snakes;
+//	}
 
 	private static void throwExceptionForInvalidValue() {
 		while (!SCANNER.hasNextInt()) {

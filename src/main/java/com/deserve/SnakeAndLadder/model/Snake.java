@@ -6,8 +6,9 @@ import lombok.Data;
 public class Snake {
     private int start;
     private int end;
+    private SnakeType snakeType;
 
-    public Snake(int start, int end) {
+    public Snake(int start, int end, SnakeType snakeType) {
         this.start = start;
         this.end = end;
     }

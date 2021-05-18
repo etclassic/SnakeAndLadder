@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface SnakeAndLadderInputReader {
 	DiceType getDiceType();
-	List<Snake>  getSnakes();
+//	List<Snake>  getSnakes();
 }
